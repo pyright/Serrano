@@ -1,39 +1,54 @@
-.tabs {
-    border: 1px solid #cccccc;
-    display: flex;
-    position: relative;
+.body {
+    background: #f4bc28;
 }
 
-.tabs__sidebar {
-    width: 125px;
+.header {
+    background: #cc0000;
+}
+
+.logo {
+}
+
+
+
+
+
+.tabs {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+  }
+
+.tabs__bar {
+    width: 100%;
+    padding-top: 2%;
     flex-shrink: 0;
-    background: #cccccc;
-    position: relative;
+    background: #rgba(0, 0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.flexButton{
 
 }
 
 .tabs__button {
     display: block;
-    padding: 10px;
-    background: #eeeeee;
-    border: none;
-    width: 100%;
+    padding: 20px;
+    background: #rgba(0, 0, 0, 0);
+    border-style: 10px solid;
+    border-top-style: none;
+    width: 20%;
     outline: none;
     cursor: pointer;
 }
 
 .tabs__button:active{
-  background: #dddddd;
-}
-
-.tabs__button:not(:last-of-type) {
-  border-bottom: 1px solid #cccccc;
-}
-
-.tabs__buton--active {
-    font-weight: bold;
-    border-right: 2px solid #009977;
-    background: #dddddd;
+  background: #2d9;
 }
 
 .tabs__content {

@@ -9,23 +9,33 @@
 
 
 
-<
-  <body>
+
+  <body class="body">
 
     <div class="header">
-      <h1>Header</h1>
-      <p>My supercool header</p>
-    </div>
-
-
-    <h1> Tabs with HTML</h1>
-    <div class="tabs">
-      <div class="tabs__sidebar">
-        <button class="tabs__button tabs__button" data-for-tab="1">Tab #1</button>
-        <button class="tabs__button" data-for-tab="2">Tab #2</button>
-        <button class="tabs__button" data-for-tab="3">Tab #3</button>
+      <div class="logo">
+        <img src="logo.png" style="background: #ffffff;"></img>
       </div>
-      <div class="tabs__content tabs__content" data-tab="1">
+    </div>
+    <div class="tabs">
+      <div class="tabs__bar">
+        <button class="tabs__button" data-for-tab="1">
+          <div class="flexButton">
+            Tab #1
+          </div>
+        </button>
+        <button class="tabs__button" data-for-tab="2">
+          <div class="flexButton">
+            Tab #2
+          </div>
+        </button>
+        <button class="tabs__button" data-for-tab="3">
+          <div class="flexButton">
+            Tab #3
+          </div>
+        </button>
+      </div>
+      <div class="tabs__content" data-tab="1">
         <h2>Tab 1</h2>
         <p>
             Chorizo Tacos, two for $333333333333
@@ -49,12 +59,12 @@
       function setupTabs () {
         document.querySelectorAll(".tabs__button").forEach(button=> {
           button.addEventListener("click", () => {
-            const sideBar = button.parentElement;
-            const tabsContainer = sideBar.parentElement;
+            const bar = button.parentElement;
+            const tabsContainer = bar.parentElement;
             const tabNumber = button.dataset.forTab;
             const tabToActivate = tabsContainer.querySelector(`.tabs__content[data-tab="${tabNumber}"]`);
 
-            sideBar.querySelectorAll(".tabs__buton").forEach(button => {
+            bar.querySelectorAll(".tabs__buton").forEach(button => {
               button.classList.remove("tabs__button--active");
             });
 
@@ -72,7 +82,7 @@
         setupTabs();
 
         document.querySelectorAll(".tabs").forEach(tabsContainer => {
-          tabsContainer.querySelector(".tabs__sidebar .tabs__button").click();
+          tabsContainer.querySelector(".tabs__bar .tabs__button").click();
         });
       });
 
