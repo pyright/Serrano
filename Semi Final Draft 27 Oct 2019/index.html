@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Parallax Website Demo</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+
+  <div class="header" id="myHeader">
+      <div class="nav-container-wrapper">
+        <div class="nav-content-wrapper">
+          <h2>My Headerxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</h2>
+        </div>
+      </div>
+  </div>
+
+  <div class="pimg1">
+    <div class="flex-container-center logo-container-wrapper">
+      <img src="img/logo2_solid_white.png"></img>
+    </div>
+  </div>
+
+
+
+<div class="tabs-container-wrapper section-light">
+    <div class="tabs">
+    <div class="tabs__bar">
+      <button class="tabs__button" data-for-tab="1">
+        <div class="flexButton">
+          Breakfast
+        </div>
+      </button>
+      <button class="tabs__button" data-for-tab="2">
+        <div class="flexButton">
+          Lunch
+        </div>
+      </button>
+      <button class="tabs__button" data-for-tab="3">
+        <div class="flexButton">
+          Specials
+        </div>
+      </button>
+    </div>
+    <div class="tabs__content" data-tab="1">
+      <h2>Tab 1</h2>
+      <p>
+          Chorizo Tacos, two for $333333333333
+      </p>
+    </div>
+    <div class="tabs__content" data-tab="2">
+      <h2>Tab 2</h2>
+      <p>
+          Burgers, philly cheese steak LUNCH SPECIAL, two for $333333333333
+      </p>
+    </div>
+    <div class="tabs__content" data-tab="3">
+      <h2>Tab 3</h2>
+      <p>
+          Lunch Plates and hot wings $33333333333
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+  <div class="pimg2">
+    <div class="ptext">
+      <span class="border trans">
+        Katy location coming soon!
+      </span>
+    </div>
+  </div>
+
+<!--
+  <section class="section section-red">
+    <h2>Section Two</h2>
+  </section>
+-->
+
+<!-- Location section -->
+  <div class="pimg3">
+    <div class="flex-container-center location-container-wrapper overlay-blue">
+      <div class="flex-container-row location-content-wrapper overlay-light">
+        <img class="img-section" src="img/image4.jpg" style="border: 3px solid #000; border-radius: 8px;"></img>
+        <div class=flex-container-column style="padding-left: 10px;">
+          <div class="text-location">
+            1802 Pearland Pkwy,
+            <br>Pearland, TX
+            <br>77581
+          </div>
+          <div class="text-hours">
+            <br>Mon-Fri: 530am - 300pm
+            <br>Sat: 600am - 200pm
+            <div class="text-sun">
+              Sun: 800am - 200pm
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- Map Section -->
+  <section class="map" id="home_map">
+    <div class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13879.65345052043!2d-95.266133!3d29.577124!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x98cad19cee1376f5!2sSerrano%20Deli!5e0!3m2!1sen!2sus!4v1572058709256!5m2!1sen!2sus" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="">
+      </iframe>
+    </div>
+  </section>
+
+<!-- Footer section -->
+  <div class="pimg1-foot">
+    <div class="flex-container-center footer-container-wrapper overlay-dark">
+      <div class="footer-content-wrapper">
+      </div>
+    </div>
+  </div>
+
+<!-- Java Script section -->
+
+<!-- JS for Tabs/Food menu -->
+  <script>
+    function setupTabs () {
+      document.querySelectorAll(".tabs__button").forEach(button=> {
+        button.addEventListener("click", () => {
+          const bar = button.parentElement;
+          const tabsContainer = bar.parentElement;
+          const tabNumber = button.dataset.forTab;
+          const tabToActivate = tabsContainer.querySelector(`.tabs__content[data-tab="${tabNumber}"]`);
+
+          bar.querySelectorAll(".tabs__buton").forEach(button => {
+            button.classList.remove("tabs__button--active");
+          });
+
+          tabsContainer.querySelectorAll(".tabs__content").forEach(tab => {
+            tab.classList.remove("tabs__content--active");
+          });
+
+          button.classList.add("tabs__button--active");
+          tabToActivate.classList.add("tabs__content--active");
+        });
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      setupTabs();
+
+      document.querySelectorAll(".tabs").forEach(tabsContainer => {
+        tabsContainer.querySelector(".tabs__bar .tabs__button").click();
+      });
+    });
+
+  </script>
+
+<!-- JS for moving header -->
+<script>
+  window.onscroll = function() {myFunction()};
+
+  var header = document.getElementById("myHeader");
+  var sticky = header.offsetTop;
+
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  }
+</script>
+
+</body>
+</html>
