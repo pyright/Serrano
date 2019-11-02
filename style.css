@@ -280,7 +280,7 @@ body, html{
 /*   Parallax Image 3   */
 .pimg3{
   background-image:url('../img/image3.jpg');
-  height:500px;
+  min-height:500px;
   background-position:center;
   background-size:cover;
   background-repeat:no-repeat;
@@ -312,10 +312,6 @@ body, html{
 
 
 /*   Parallax Image 4   */
-.img4{
-  height: 200px;
-}
-
 .pimg-foot{
 /*  background-image: url('../img/footer_image.jpg');*/
   background-color: #444;
