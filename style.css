@@ -313,7 +313,7 @@ body, html{
 
 .pimg-foot{
 /*  background-image: url('../img/footer_image.jpg');*/
-  color: 444;
+  background-color: #444;
   min-height:30px;
 }
 
