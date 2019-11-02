@@ -269,7 +269,7 @@ body, html{
 /*   Parallax Image 3   */
 .pimg3{
   background-image:url('../img/image3.jpg');
-  min-height:300px;
+  min-height:400px;
   background-position:center;
   background-size:cover;
   background-repeat:no-repeat;
@@ -279,8 +279,7 @@ body, html{
 
   /*   Map Section   */
 .map-container-wrapper{
-  height: 497px;
-  min-height:297px;
+  height: 400px;
   width: 100%;
   }
 
