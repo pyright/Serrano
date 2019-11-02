@@ -15,12 +15,22 @@
 
 
   <div class="header" id="myHeader">
-      <div class="nav-container-wrapper">
-        <div class="nav-content-wrapper">
-          Welcome to Serrano's Deli!_____More links go here
+    <div class="container nav-container-wrapper">
+      <div class="row nav-content-wrapper">
+        <div class="col-sm">
+          One of three columns
+        </div>
+        <div class="col-sm">
+          Welcome to Serrano's Deli!
+        </div>
+        <div class="col-sm">
+          One of three columns
         </div>
       </div>
+    </div>
   </div>
+
+
 
   <div class="pimg1">
     <div class="flex-container-center logo-container-wrapper">
@@ -50,22 +60,82 @@
       </button>
     </div>
     <div class="tabs__content" data-tab="1">
-      <h2>Tab 1</h2>
-      <p>
-          Chorizo Tacos, two for $333333333333
-      </p>
+      <h2>Breakfast</h2>
+      <div class="flex-container-row" style="flex-wrap: wrap;">
+        <div class="flex-container-column" style="margin-right:50px;">
+          <img src="img/burrito.JPG" class="menu-thumbnail"></img>
+          <p class="menu-text">
+              burrito, two for $xy.z
+              <br> comes with side x y z
+          </p>
+        </div>
+        <div class="flex-container-column" style="margin-right:50px;">
+          <img src="img/cheese_steak.JPG" class="menu-thumbnail"></img>
+          <p class="menu-text">
+              burrito, two for $xy.z
+              <br> comes with side x y z
+          </p>
+        </div>
+        <div class="flex-container-column" style="margin-right:50px;">
+          <img src="img/catfish.JPG" class="menu-thumbnail"></img>
+          <p class="menu-text">
+              burrito, two for $xy.z
+              <br> comes with side x y z
+          </p>
+        </div>
+      </div>
     </div>
     <div class="tabs__content" data-tab="2">
-      <h2>Tab 2</h2>
-      <p>
-          Burgers, philly cheese steak LUNCH SPECIAL, two for $333333333333
-      </p>
+      <h2>Lunch</h2>
+      <div class="flex-container-row" style="flex-wrap: wrap;">
+        <div class="flex-container-column" style="margin-right:50px;">
+          <img src="img/taco_plate.JPG" class="menu-thumbnail"></img>
+          <p class="menu-text">
+              burrito, two for $xy.z
+              <br> comes with side x y z
+          </p>
+        </div>
+        <div class="flex-container-column" style="margin-right:50px;">
+          <img src="img/tacos.JPG" class="menu-thumbnail"></img>
+          <p class="menu-text">
+              burrito, two for $xy.z
+              <br> comes with side x y z
+          </p>
+        </div>
+        <div class="flex-container-column" style="margin-right:50px;">
+          <img src="img/chicken.JPG" class="menu-thumbnail"></img>
+          <p class="menu-text">
+              burrito, two for $xy.z
+              <br> comes with side x y z
+          </p>
+        </div>
+      </div>
     </div>
     <div class="tabs__content" data-tab="3">
-      <h2>Tab 3</h2>
-      <p>
-          Lunch Plates and hot wings $33333333333
-      </p>
+      <h2>Specials</h2>
+      <div class="flex-container-row"  style="flex-wrap: wrap;">
+        <div class="flex-container-column" style="margin-right:50px;">
+          <img src="img/chicken.JPG" class="menu-thumbnail"></img>
+          <p class="menu-text">
+              burrito, two for $xy.z
+              <br> comes with side x y z
+          </p>
+        </div>
+        <div class="flex-container-column" style="margin-right:50px;">
+          <img src="img/burrito.JPG" class="menu-thumbnail"></img>
+          <p class="menu-text">
+              burrito, two for $xy.z
+              <br> comes with side x y z
+          </p>
+        </div>
+        <div class="flex-container-column" style="margin-right:50px;">
+          <img src="img/enchilade.JPG" class="menu-thumbnail"></img>
+          <p class="menu-text">
+              enchilade, two for $xy.z
+              <br> comes with side x y z
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -80,43 +150,44 @@
     </div>
   </div>
 
-<!--
-  <section class="section section-red">
-    <h2>Section Two</h2>
+
+  <section class=" section-red">
+    <div class="location-container-wrapper flex-container-center">
+      <div class="flex-container-column flex-container-center">
+        <img class="img-section" src="img/image4.jpg" style="border: 3px solid #000; border-radius: 8px;"></img>
+        <div class="text-location">
+          1802 Pearland Pkwy,
+          <br>Pearland, TX
+          <br>77581
+        </div>
+        <div class="text-hours">
+          Mon-Fri: 530am - 300pm
+          <br>Sat: 600am - 200pm
+          <br>Sun: 800am - 200pm
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
--->
+
 
 <!-- Location section -->
   <div class="pimg3">
-    <div class="flex-container-center location-container-wrapper overlay-blue">
-      <div class="flex-container-row location-content-wrapper overlay-light">
-        <img class="img-section" src="img/image4.jpg" style="border: 3px solid #000; border-radius: 8px;"></img>
-        <div class=flex-container-column style="padding-left: 10px;">
-          <div class="text-location">
-            1802 Pearland Pkwy,
-            <br>Pearland, TX
-            <br>77581
+    <div class="flex-container-center map-container-wrapper overlay-blue">
+      <div class="flex-container-center map-content-wrapper overlay-light">
+        <section class="map" id="home_map">
+          <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13879.65345052043!2d-95.266133!3d29.577124!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x98cad19cee1376f5!2sSerrano%20Deli!5e0!3m2!1sen!2sus!4v1572058709256!5m2!1sen!2sus" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="">
+            </iframe>
           </div>
-          <div class="text-hours">
-            <br>Mon-Fri: 530am - 300pm
-            <br>Sat: 600am - 200pm
-            <div class="text-sun">
-              Sun: 800am - 200pm
-            </div>
-          </div>
-        </div>
+        </section>
       </div>
     </div>
   </div>
 
 
 <!-- Map Section -->
-  <section class="map" id="home_map">
-    <div class="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13879.65345052043!2d-95.266133!3d29.577124!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x98cad19cee1376f5!2sSerrano%20Deli!5e0!3m2!1sen!2sus!4v1572058709256!5m2!1sen!2sus" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="">
-      </iframe>
-    </div>
-  </section>
+
 
 <!-- Footer section -->
   <div class="pimg1-foot">
