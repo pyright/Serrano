@@ -281,17 +281,18 @@ body, html{
   /*   Map Section   */
 .map-container-wrapper{
   height: 497px;
+  min-height:297px;
   width: 100%;
   }
 
 .map-wrapper{
-  height: 320px;
-  max-width: 100%;
-  width: auto;
-  padding: 10px;
-  font-size: 64px;
-  border-radius: 8px;
   border: 3px solid #000;
+  border-radius: 8px;
+  font-size: 64px;
+  height: 75%;
+  width: auto;
+  max-width: 100%;
+  padding: 10px;
 }
 
 .map {
