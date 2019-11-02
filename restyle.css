@@ -1,0 +1,323 @@
+/*Body and HTML*/
+
+body, html{
+  height:100%;
+  margin:0;
+  font-size:16px;
+  font-weight:400;
+  line-height:1.8em;
+}
+
+/* Containers, Sub-containers, and Wrappers */
+.wrapper{
+  height: 100%;
+  width: 100%
+}
+
+.container{
+  display: flex;
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+}
+
+.center{
+  justify-content: center;
+  align-items: center;
+}
+
+.border-top, .border-bottom {
+  border-top: 3px solid #000;
+}
+
+
+.image-section{
+  background-repeat: no-repeat;
+  max-width: 80%;
+  border: 3px solid #000;
+  border-radius: 8px;
+}
+
+.red-section{
+  background-color:#AC2D1D;
+  color:#eee;
+}
+
+.section-yellow{
+  background-color:#ffcf35;
+  color:#111;
+}
+
+.section-blue{
+  background-color: #0075AD;
+  color: #fff;
+}
+
+.white-section{
+  background-color: #FFF;
+  color: #000;
+}
+
+.overlay-blue {
+  background-color: rgba(180, 200, 250, 0.8);
+  border-bottom: 3px solid #000;
+}
+
+.overlay-light {
+  background-color: rgba(232, 232, 232, 0.5);
+}
+
+.overlay-dark {
+  background-color: rgba(32, 32, 32, 0.5);
+}
+
+
+
+/*   Header  */
+.header {
+  width: 100%;
+  height: 10%;
+  background-color: #ffcf35;
+  z-index: 100;
+  padding: 10px 16;
+  border-bottom: 3px solid #000;
+  border-top: 3px solid #0000;
+  color: #FFF;
+  text-shadow: 1px 1px 2px #000;
+  font-family: 'Zilla Slab', serif;
+  font-size: 32px;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  width: 100%
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+
+
+
+
+/*   Parallax Image 1  */
+.pimg1, .pimg2, .pimg3, .pimg-foot{
+  position:relative;
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  z-index: -100;
+}
+
+@media(max-width:568px){
+  .pimg1, .pimg2, .pimg3, .pimg-foot{
+    background-attachment:scroll;
+  }
+}
+
+.pimg1{
+  background-image: url('../img/image1.jpg');
+  min-height:700px;
+}
+
+/*   Logo  */
+.logo-wrapper {
+  width: 100%;
+  height: 700px;
+}
+
+
+/*   Menu Section  */
+.menu-section-wrapper{
+  height: auto;
+  width: 100%;
+}
+
+.menu-wrapper {
+  width: 80%;
+}
+
+.menu__bar {
+  width: 100%;
+  flex-shrink: 0;
+  background: #fff0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-top: 10px;
+}
+
+.menu__button {
+  background: rgba(0, 0, 0, 0.0);
+  border: 3px #000 solid;
+  border-radius: 8px;
+  color: #111;
+  cursor: pointer;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 3.5vw;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  width: 25%;
+}
+
+.menu__button:active{
+  background-color: #777;
+}
+
+.menu__content {
+  font-size: 0.8rem;
+  display: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 3px solid #000;
+  border-radius: 8px;
+}
+
+.menu__content--active{
+  display: block;
+}
+
+.menu__content > :first-child {
+  margin-top: 0;
+}
+
+
+/*  Menu Items   */
+
+.menu-thumbnail{
+  width: 200px;
+  max-width: 80%;
+  height: 200px;
+  border: 3px solid #000;
+  object-fit: fill;
+  border-radius: 8px;
+}
+
+.menu-text{
+  margin-top: 5px;
+  color: #000;
+  text-shadow: 1px 1px 2px #000;
+  font-family: 'Zilla Slab', serif;  font-size: 32px;
+}
+
+
+
+
+
+/*  Parallax Image 2   */
+.pimg2{
+  background-image:url('../img/image2x.jpg');
+  min-height:400px;
+}
+
+/*   Parallax Image 2 Text  */
+.p2text-wrapper{
+  height: 400px;
+  width: 100%;
+}
+
+.p2text{
+  position:absolute;
+  top:50%;
+  width:100%;
+  color:#FFF;
+  font-family: 'Shadows Into Light', cursive;
+  font-size:42px;
+  font-weight: 800;
+  letter-spacing:8px;
+  text-align:center;
+  text-shadow: 1px 1px 2px #000;
+  text-transform: uppercase;
+}
+
+/*   Location and Hours Section  */
+
+.location-wrapper{
+  height: 500px;
+  width: 100%;
+}
+
+.text-location{
+  border-radius: 8px;
+  color: #000;
+  font-family: 'Nunito', cursive;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.text-hours{
+  border: 3px solid #000;
+  border-radius: 8px;
+  color: #000;
+  font-family: 'Nunito', cursive;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+  text-align: right;
+}
+
+
+/*   Parallax Image 3   */
+.pimg3{
+  background-image:url('../img/image3.jpg');
+  height:500px;
+}
+
+  /*   Map Section   */
+.map-container-wrapper{
+  height: 497px;
+  width: 100%;
+  }
+
+.map-wrapper{
+  height: 320px;
+  max-width: 100%;
+  width: auto;
+  padding: 10px;
+  font-size: 64px;
+  border-radius: 8px;
+  border: 3px solid #000;
+}
+
+.map {
+  height: 100%;
+  width: 100%;
+}
+
+
+
+/*   Parallax Image 4   */
+.img4{
+  height: 200px;
+}
+
+.pimg-foot{
+  background-image: url('../img/footer_image.jpg');
+  min-height:115px;
+}
+
+/*   Footer   */
+.footer-wrapper{
+  height: 115px;
+  width: 100%
+}
