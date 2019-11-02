@@ -112,7 +112,7 @@ body, html{
 
 
 /*   Parallax Image 1  */
-.pimg1, .pimg2, .pimg3, .pimg-foot{
+.pimg1, .pimg2, .pimg-foot{
   position:relative;
   background-position:center;
   background-size:cover;
@@ -281,6 +281,11 @@ body, html{
 .pimg3{
   background-image:url('../img/image3.jpg');
   height:500px;
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  z-index: -100;
 }
 
   /*   Map Section   */
