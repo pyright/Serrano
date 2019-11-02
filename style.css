@@ -206,9 +206,6 @@ body, html{
 }
 
 
-
-
-
 /*  Parallax Image 2   */
 .pimg2{
   background-image:url('../img/image2x.jpg');
@@ -251,6 +248,7 @@ body, html{
   margin-bottom: 5px;
   margin-top: 10px;
   text-align: left;
+  text-shadow: 1px 1px 2px #A21;
 }
 
 .text-hours{
@@ -264,6 +262,7 @@ body, html{
   margin-bottom: 10px;
   padding: 10px;
   text-align: right;
+  text-shadow: 1px 1px 2px #A21;
 }
 
 
